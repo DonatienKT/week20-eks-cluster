@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wp-cm
+data:
+  data_host: mysql-svc
+  

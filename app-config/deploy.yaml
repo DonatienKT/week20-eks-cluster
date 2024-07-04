@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-geo-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-geo-app
+  template:
+    metadata:
+      labels:
+        app: my-geo-app
+    spec:
+      containers:
+      - name: my-geo-app
+        image: 650959877739.dkr.ecr.us-east-1.amazonaws.com/docker-repos:v.23
+        
+        ports:
+        - containerPort: 8082
